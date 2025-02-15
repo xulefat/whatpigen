@@ -1,0 +1,237 @@
+    /* 基本页面样式 */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4; /* 温和的灰白色 */
+        color: #141414; /* 深灰色文字，柔和眼睛 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        
+    }
+
+    /* 终端窗口样式 */
+    .terminal {
+        width: 90vw;
+        max-width: 900px;
+        height: 90vh;
+        padding: 20px;
+        background-color: #ffffff; /* 纯白色背景 */
+        border-radius: 15px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* 柔和阴影 */
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    /* 导航栏样式 */
+    .navbar {
+        background-color: #babfc3; 
+        color: #f9f9f9;
+        padding: 5px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-left-radius: 12px;     /* 左上角 */
+
+        border-top-right-radius: 12px;    /* 右上角 */
+
+        border-bottom-left-radius: 0px;  /* 左下角 */
+
+        border-bottom-right-radius: 0px; /* 右下角 */
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .navbar .title {
+        
+        font-size: 18px;
+        font-weight: bold;
+       
+    }
+   
+    .navbar .buttons {
+        display: flex;
+        gap: 10px;
+    }
+
+    .navbar .button {
+        width: 12px;
+        height: 12px;
+       
+        cursor: pointer;
+    }
+
+    .navbar .button.min {
+        color: #ffffff;
+    }
+
+    .navbar .button.max {
+        color: #ffffff;
+    }
+
+    .navbar .button {
+        margin-right: 2px;
+        }
+
+    /* 输出区域 */
+    .output {
+        background-color: #f4f4f4;/* 非常浅的灰色背景 */
+        padding: 20px;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        
+        padding:8px 4px 4px 4px;
+        border-top-left-radius: 0px;     /* 左上角 */
+
+        border-top-right-radius: 0px;    /* 右上角 */
+
+        border-bottom-left-radius: 12px;  /* 左下角 */
+
+        border-bottom-right-radius: 12px; /* 右下角 */
+
+        border: 1px solid #e0e0e0; /* 细边框 */
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05); /* 内部阴影 */
+        flex-grow: 1;
+        font-size: 16px;
+        font-family: 'Courier New', Courier, monospace;
+        color: #353535; /* 深灰色字体 */
+        overflow-x: hidden;
+        overflow-y: auto;
+
+    }
+
+    /* 输入框区域 */
+
+    
+
+    .input-line {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin-top: 16px;
+
+    }
+
+    #userInput{
+        border-bottom:none;  /* 去掉输入框下边的下划线 */
+        caret-color: #1e1e1e;
+    }
+
+    .input-line span {
+        margin-right: 10px;
+        font-weight: bold;
+        color: #888; /* 温和的灰色 */
+    }
+
+    .input-line input {
+        background: transparent;
+        color: #333;
+        border: none;
+        outline: none;  /* 去掉输入框焦点时的默认轮廓 */
+        font-size: 16px;
+        width: 100%;
+        transition: border-color 0.3s ease;
+        
+        
+    }
+    
+    
+    
+    .input-line input:focus {
+        border-bottom: 1px solid #999; /* 焦点时变成深灰色 */
+    }
+
+    #output5{
+        color: rgb(151, 151, 151);
+       
+    }
+
+    #prompt{
+        margin: 0px;
+    }
+    
+    
+    .cursor{
+        margin: 0px;
+      
+    }
+    #output5{
+        font-family: 'Roboto', sans-serif;
+    }
+    .system{
+        background-color:#babfc3 ;
+        
+    }
+    .get-input{
+        background-color:#babfc3 ;
+        
+    }
+    .return{
+        background-color: #9dd4e7 ;
+    }
+    .erro{
+        background-color:#d85363;
+        font-family: 'Roboto', sans-serif;
+    }
+    #oop{
+        font-family: 'Roboto', sans-serif;
+    }
+    ol{
+        margin: 0px;
+        padding: 13px 0px 13px 18px; /*上右下坐*/
+    }
+    ul{
+        margin: 0px;
+        padding: 13px 0px 13px 0px; /*上右下坐*/
+       
+
+        list-style: none; 
+    }
+
+    #ii{
+        color: rgb(0, 0, 0);
+        font-family: 'Roboto', sans-serif;
+    }
+    a{
+        color: #000000;
+    }
+    
+    #footer{
+        position: absolute;bottom: 0px;text-align: center;width: 100%;font-size: small; color: rgb(107, 107, 107); z-index: 2;
+    }
+    
+    /* 鼠标点击时 */
+    /* 闪烁光标动画 */
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+        .terminal {
+            width: 95vw;
+            height: 95vh;
+            padding: 15px;
+        }
+        .output {
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .terminal {
+            width: 100vw;
+            height: 100vh;
+            padding: 10px;
+        }
+        .output {
+            height: 100%;
+        }
+    }

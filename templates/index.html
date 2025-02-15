@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/image/ggg.png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/1.css') }}">
+
+    <title>什么大匹咕blog</title>
+    
+</head>
+<body>
+
+    <div class="terminal">
+        <!-- 导航栏 -->
+        <div class="navbar">
+            <div class="title" id="output1" >什么大匹咕blog</div>
+            <div class="buttons">
+                <div class="button min" id="output2"> 一</div>
+                <div class="button max" id="output3">口 </div>
+                <div class="button close" id="output4">乂 </div>
+            </div>
+        </div>
+
+        <!-- 输出区域 -->
+        <div id="outputArea" class="output">
+            <div>
+               
+                
+                <div  class="prompt" id="output5" >
+                   
+                    <span id="index1"> </span> 
+                    <br>
+                    <span id="index2"></span>
+                    
+                   
+                </div>
+            </div>
+
+
+            <div class="input-line">
+                <span class="prompt" id="prompt"> <b id="index3"> </b></span>
+                
+                 <!-- 光标放在这里  <span class="cursor"></span> -->
+                <input type="text" id="userInput"  autofocus>
+                
+                
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <div id="footer">
+        Copyright © 2025 什么大匹咕. 
+    </div>
+    <div id="one" hidden>
+        
+        <div style="border-style: dashed;padding: 10px;border-width: 1px;">
+            <ol >
+                {% for item in datalist %}
+
+                    
+
+                    <li>
+                    
+                    <span style="width: 100%;display: block;"><a style="text-decoration: none;" href="/articlesdetail/{{item.id}}">{{item.tittle}}</a> </span>
+
+                    
+
+                    <span style="font-size: small; color: rgb(107, 107, 107);">上传日期:{{item.date}} </span> 
+                    
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
+
+        <div id="two" hidden>
+            <div style="border-style:dashed;padding: 10px;border-width: 1px;">
+
+                    <ul >
+                    {% for item in datalisttwo %}
+                        <li style="border-style:groove;;">
+
+                       
+                            <span></span>
+                        
+                            <a href="https://{{item.link}}" style="color: #000000;text-decoration: none;">{{item.name}}</a>
+                            <br>
+                          
+                            <span style="color: rgb(107, 107, 107);font-size: small;">{{item.description}}</span>
+                        </li>
+
+                    {% endfor %}
+                    </ul>
+                   
+
+            </div>
+        </div>
+       
+
+
+    </div>
+
+   
+    <script src="{{ url_for('static', filename='js/index.js') }}" ></script>
+</body>
+</html>
