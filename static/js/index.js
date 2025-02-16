@@ -25,7 +25,7 @@ const userInput = document.getElementById("userInput");
         }
 
         const text1 = "欢迎来到“什么大匹咕”的博客( ^_^)/~~~";
-        const text2 = "咕咕咕，输入“command”获取可用指令。";
+        const text2 = "在下面，输入“command”获取可用指令。";
         const text3 = "➜Type:";
         const speed = 50;
         typeWriter('index1', text1, speed); // 第一个标签，每100ms输出一个字符
