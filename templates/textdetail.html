@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/image/myfirtpixelpicture.png" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/11.css') }}">
+    <script src="{{ url_for('static', filename='plugin/showdown/showdown.min.js') }}"></script>
+    <title>乐鸽.(index_page)</title>
+    
+</head>
+<body>
+
+    <div class="terminal">
+        <!-- 导航栏 -->
+        
+        <!-- 输出区域 -->
+        <div id="outputArea" class="output">
+            <h2 id="tittle" style="text-align: center;">{{datalist[0]['tittle']}}</h2>
+            
+           
+        
+            <div id="text" hidden>{{datalist[0]['text']}}</div> 
+            <div id="aftertranslationtext" >如果看到这句话，证明markdown转html失败。</div>
+
+
+            <p id="date" style="margin-top: 30px;font-size: small;text-align: right;">上传日期: {{datalist[0]['date']}}</p>
+           
+        
+        </div>
+
+        
+
+    </div>
+
+    <div id="footer">
+        Copyright © 2025 乐鸽. 
+    </div>
+ 
+
+   
+    <script src="{{ url_for('static', filename='js/textdetail.js') }}" ></script>
+</body>
+</html>
