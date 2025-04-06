@@ -147,7 +147,7 @@ const userInput = document.getElementById("userInput");
                            
                             <span  class="return">check</span>
                             <br>
-                            00后。这是我的博客。关于“关于”就先简单写到这吧。
+                            这是我的博客。关于“关于”就先简单写到这吧。
                             <br>
                             ————另外，欢迎欢迎(￣~▽~￣)ノ...
                             
